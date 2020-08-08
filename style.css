@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Rubik";
+    font-size: 15px;
+}
+
+.cell::before {
+    z-index: -1;
+    content: "";
+    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    height: 1500px;
+    width: 30vw;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    right: 265px;
+    bottom: -50px;
+}
+
+.cell {
+    background-color: hsl(270, 20%, 96%);
+    border: 20px solid white;
+    width: 30%;
+    box-shadow: 14px 14px 45px -15px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    position: absolute;
+    top: 150px;
+    left: 155px;
+}
+
+.profile {
+    position: relative;
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 10px 5px 5px;
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+.forma {
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    height: 30px;
+    left: 7vw;
+    bottom: 70px;
+    border-radius: 0 0 10px 10px;
+}
+
+.img {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    border: 2px solid white;
+    margin-left: 20px;
+}
+
+.head {
+    margin-left: 10px;
+}
+
+.head h3 {
+    margin-top: 5px;
+}
+
+.head p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.fa-angle-left {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.fa-ellipsis-v {
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.img, .head, .fa-angle-left, .fa-ellipsis-v {
+    margin-top: 50px;
+}
+
+.chat {
+    padding: 5px;
+    background-color: hsl(270, 20%, 96%);
+}
+
+.mensaje {
+    background-color: hsl(264, 3%, 70%);
+    max-width: 60%;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 10px 20px;
+}
+
+.imagenes {
+    display: flex;
+    margin-left: auto;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+.perros {
+    width: 70px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.recibido {
+    color: hsl(276, 55%, 52%);
+    margin-right: auto;
+    border-radius: 5px 5px 5px 0px;
+}
+
+.enviado {
+    color: hsl(271, 15%, 43%);
+    margin-left: auto;
+    border-radius: 5px 5px 0px 5px;
+}
+
+.box {
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    width: 60%;
+    border-radius: 5px 5px 5px 0px;
+    color: white;
+    margin-left: 10px;
+    display: inline-flex;
+    margin-bottom: 15px;
+    padding: 10px;
+    /* justify-content: space-between; */
+}
+
+.fa-circle {
+    margin-left: 5px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.box h3 {
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.text-box {
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    color: hsl(206, 6%, 79%);
+    align-items: center;
+}
+
+.text-box p {
+    margin-left: 20px;
+    width: fit-content;
+}
+
+.fa-angle-right {
+    margin-left: auto;
+    background-color: hsl(271, 36%, 24%);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+.par {
+    width: 40%;
+    float: right;
+    margin-right: 100px;
+    margin-top: 20%;
+}
+
+.par h1 {
+    font-size: 4rem;
+    color: hsl(271, 36%, 24%);
+}
+
+.par p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    color: hsl(270, 7%, 64%);
+}
+
+@media(max-width:500px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    .cell::before {
+        right: 205px;
+        width: 50vw;
+        height: 300vh;
+        bottom: 100px;
+    }
+    .cell {
+        width: 80vw;
+        left: 10vw;
+        top: 10px;
+    }
+    .forma {
+        left: 17vw;
+    }
+    .perros {
+        width: 55px;
+    }
+    .par {
+        position: static;
+        width: 80vw;
+        margin: 1000px auto 20px;
+    }
+    .par h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .par p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
